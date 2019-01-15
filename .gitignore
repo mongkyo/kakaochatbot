@@ -3,7 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=vim,git,linux,macos,python,django,windows,virtualenv,pycharm+all
 
 ### Secret ###
-.secret
+.secrets
 
 
 ### Django ###
