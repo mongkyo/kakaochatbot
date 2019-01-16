@@ -10,11 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
-import os
 import json
+import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 SECRET_ROOT = os.path.join(ROOT_DIR, '.secrets')
 # Quick-start development settings - unsuitable for production
@@ -22,19 +22,26 @@ SECRET_ROOT = os.path.join(ROOT_DIR, '.secrets')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
 
-SECRET_KEY = json.load(open(os.path.join(SECRET_ROOT, 'base.json')))
+base_secrets = json.load(open(os.path.join(SECRET_ROOT, 'base.json')))
+SECRET_KEY = base_secrets['SECRET_KEY']
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
-AUTH_USER_MODEL = 'members.User'
+# AUTH_USER_MODEL = 'members.User'
 # Application definition
 
+# static
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
+
 INSTALLED_APPS = [
-    'members',
+#    'members',
 
     'django.contrib.admin',
     'django.contrib.auth',

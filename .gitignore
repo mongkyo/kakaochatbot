@@ -5,6 +5,8 @@
 ### Secret ###
 .secrets
 
+### collectstatic ###
+.static
 
 ### Django ###
 *.log
