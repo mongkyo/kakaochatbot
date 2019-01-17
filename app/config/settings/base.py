@@ -41,7 +41,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 
 INSTALLED_APPS = [
-#    'members',
+    'members',
 
     'django.contrib.admin',
     'django.contrib.auth',
