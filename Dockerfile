@@ -12,9 +12,9 @@ RUN             rm -rf /etc/nginx/sites-available/* && \
 				ln -sf /etc/nginx/sites-available/app.nginx \
 					   /etc/nginx/sites-enabled/app.nginx
 
-RUN             cp -f  /srv/projcet/.config/supervisord.conf \
-					   /etc/supervisor/conf.d/
 
+RUN             cp -f  /srv/project/.config/supervisord.conf \
+                       /etc/supervisor/conf.d/
 
 EXPOSE          80
 
