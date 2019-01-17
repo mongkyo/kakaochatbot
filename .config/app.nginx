@@ -11,8 +11,8 @@ server {
 		include    uwsgi_params;
 	}
 	
-	location /media/ {
-		alias /srv/project/.media/;
+	location /static/ {
+		alias /srv/project/.static/;
 	}
     
 	if ($http_x_forwarded_proto = 'http') {
