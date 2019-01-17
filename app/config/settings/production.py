@@ -9,7 +9,6 @@ production_secrets = json.load(open(os.path.join(SECRET_ROOT, 'production.json')
 DATABASES = production_secrets['DATABASES']
 
 DEFAULT_FILE_STORAGE = 'config.storages.MediaStorage'
-
 AWS_ACCESS_KEY_ID = production_secrets['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = production_secrets['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = production_secrets['AWS_STORAGE_BUCKET_NAME']
