@@ -17,6 +17,7 @@ AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_REGION_NAME = 'ap-northeast-2'
 
 ALLOWED_HOSTS = [
+    '.amazonaws.com',
     '.elasticbeanstalk.com',
     'monglab.com',
     'www.monglab.com',
