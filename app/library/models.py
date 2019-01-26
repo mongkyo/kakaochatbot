@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Book_info(models.Modeli):
+class Book_info(models.Model):
     title = models.TextField('책 제목')
     author = models.CharField('작가', max_length=100)
     publisher = models.CharField('출판사', max_length=100)

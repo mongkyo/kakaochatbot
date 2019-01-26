@@ -43,6 +43,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 INSTALLED_APPS = [
     'members',
     'library',
+    'keyboard',
 
     'django.contrib.admin',
     'django.contrib.auth',
