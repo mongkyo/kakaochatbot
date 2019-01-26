@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('members/', include('members.urls')),
     path('library/', include('library.urls')),
+    path('keyboard/', include('keyboard.urls')),
 ]
 
 urlpatterns += static(
