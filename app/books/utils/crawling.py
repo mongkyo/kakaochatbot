@@ -59,7 +59,7 @@ class Crawler:
                 book_tmp['returnDate'] = tr.select_one('.returnDate').get_text()
                 book_one[f'{no}'] = book_tmp
 
-            print(book_one)
+            return book_one
 
 
 if __name__ == '__main__':

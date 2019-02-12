@@ -43,6 +43,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 INSTALLED_APPS = [
     'members',
     'library',
+    'books',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
