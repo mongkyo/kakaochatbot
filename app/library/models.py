@@ -11,3 +11,4 @@ class Book_info(models.Model):
     serial_number = models.CharField('도서 고유번호', max_length=200)
     status = models.CharField('도서 상태', max_length=250)
     return_date = models.CharField('반납일', max_length=200)
+
