@@ -9,12 +9,14 @@ import re
 import urllib.request
 
 
-class BookData:
-    def __init__(self, keyword):
-        self.keyword = keyword
+class Book:
+    def __init__(self, title, author, location):
+        self.title = title
+        self.author = author
+        self.location = location
 
     def __repr__(self):
-        return self.keyword
+        return self.title
 
 
 class Crawler:
@@ -27,9 +29,10 @@ class Crawler:
         driver = webdriver.Chrome(chromedriver_dir)
         driver.get('https://nsulib.nsu.ac.kr/')
         elem = driver.find_element_by_id('type1q')
-        elem.send_keys('검은집')
+        elem.send_keys(self)
         elem.send_keys(Keys.RETURN)
         a_tag = driver.find_elements_by_xpath('//a[contains(@href,"#previewLocation")]')
+
         for a in a_tag[:3+1]:
             a.click()
         time.sleep(2)
@@ -57,3 +60,8 @@ class Crawler:
                 book_one[f'{no}'] = book_tmp
 
             print(book_one)
+
+
+if __name__ == '__main__':
+    a = input()
+    Crawler.show_book_info(a)
