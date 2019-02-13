@@ -3,7 +3,4 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    img_profile = models.ImageField(
-        upload_to='user',
-        blank=True,
-    )
+    visited = models.DateTimeField(auto_now=True)
