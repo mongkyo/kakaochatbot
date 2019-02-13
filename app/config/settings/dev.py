@@ -15,3 +15,7 @@ AWS_ACCESS_KEY_ID = dev_secrets['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = dev_secrets['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = dev_secrets['AWS_STORAGE_BUCKET_NAME']
 
+
+INSTALLED_APPS += [
+    'django_extensions',
+]
