@@ -18,4 +18,5 @@ AWS_STORAGE_BUCKET_NAME = dev_secrets['AWS_STORAGE_BUCKET_NAME']
 
 INSTALLED_APPS += [
     'django_extensions',
+    'rest_framework',
 ]
