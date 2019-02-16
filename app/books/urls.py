@@ -3,5 +3,5 @@ from django.urls import path
 from books import apis
 
 urlpatterns = [
-    path('', apis.BookSearchView.as_view()),
+    path('<str:keyword>/', apis.BookSearchView.as_view()),
 ]

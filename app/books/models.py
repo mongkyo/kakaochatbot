@@ -1,10 +1,8 @@
 import time
-from selenium import webdriver
 from bs4 import BeautifulSoup
+from selenium import webdriver
 from django.db import models
-
 from selenium.webdriver.common.keys import Keys
-
 
 class Book(models.Model):
     title = models.TextField('제목')
@@ -24,7 +22,11 @@ class Book(models.Model):
                 """
 
         chromedriver_dir = '/Users/mongkyo/Projects/kakao-chatbot/crawling/chromedriver'
-        driver = webdriver.Chrome(chromedriver_dir)
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+        options.add_argument('window-size=1920x1080')
+        options.add_argument("disable-gpu")
+        driver = webdriver.Chrome(chromedriver_dir, chrome_options=options)
         driver.get('https://nsulib.nsu.ac.kr/')
         elem = driver.find_element_by_id('type1q')
         elem.send_keys(keyword)
