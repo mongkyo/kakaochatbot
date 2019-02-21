@@ -22,6 +22,7 @@ ALLOWED_HOSTS = [
     'www.monglab.com',
     'api.monglab.com',
     'localhost',
+    '127.0.0.1',
 ]
 
 # Log

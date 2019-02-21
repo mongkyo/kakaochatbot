@@ -25,8 +25,8 @@ class Book(models.Model):
                 책 검색 정보를 불러와준다
                 """
 
-        CHROME_DIR = os.path.join(ROOT_DIR, 'crawling')
-        chromedriver_dir = os.path.join(CHROME_DIR, 'chromedriver')
+        CHROME_ROOT = os.path.join(ROOT_DIR, 'crawling')
+        chromedriver_dir = os.path.join(CHROME_ROOT, 'chromedriver')
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
         options.add_argument('window-size=1920x1080')
