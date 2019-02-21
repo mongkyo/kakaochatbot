@@ -1,8 +1,12 @@
+import os
 import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from django.db import models
 from selenium.webdriver.common.keys import Keys
+
+from config.settings.base import ROOT_DIR
+
 
 class Book(models.Model):
     title = models.TextField('제목')
@@ -21,7 +25,8 @@ class Book(models.Model):
                 책 검색 정보를 불러와준다
                 """
 
-        chromedriver_dir = '/Users/mongkyo/Projects/kakao-chatbot/crawling/chromedriver'
+        CHROME_DIR = os.path.join(ROOT_DIR, 'crawling')
+        chromedriver_dir = os.path.join(CHROME_DIR, 'chromedriver')
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
         options.add_argument('window-size=1920x1080')
