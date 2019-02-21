@@ -11,9 +11,9 @@ RUN             apt -y install gcc nginx supervisor && \
                 apt -y autoremove
 
 RUN             apt -y install wget
-RUN             apt -y install libxss1 libappindicator1 libindicator7 \
-                wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-                apt -y install ./google-chrome*.deb
+RUN             apt -y install libxss1 libappindicator1 libindicator7
+RUN             wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN             apt -y install ./google-chrome*.deb
 
 
 RUN             apt -y install libglib2.0-0=2.50.3-2 \
