@@ -25,13 +25,13 @@ class Book(models.Model):
                 책 검색 정보를 불러와준다
                 """
 
-        CHROME_ROOT = os.path.join(ROOT_DIR, 'crawling')
-        chromedriver_dir = os.path.join(CHROME_ROOT, 'chromedriver')
+        CHROME_DIR = os.path.join(ROOT_DIR, 'crawling')
+        chromedriver_dir = os.path.join(CHROME_DIR, 'chromedriver-linux')
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
         options.add_argument('window-size=1920x1080')
         options.add_argument("disable-gpu")
-        driver = webdriver.Chrome(chromedriver_dir, chrome_options=options)
+        driver = webdriver.Chrome(executable_path=chromedriver_dir, chrome_options=options)
         driver.get('https://nsulib.nsu.ac.kr/')
         elem = driver.find_element_by_id('type1q')
         elem.send_keys(keyword)

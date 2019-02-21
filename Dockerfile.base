@@ -10,6 +10,8 @@ RUN             apt -y install gcc nginx supervisor && \
                 apt -y remove gcc && \
                 apt -y autoremove
 
+RUN             apt -y install libfontconfig
+
 
 COPY            requirements-production.txt /tmp/requirements.txt
 WORKDIR         /tmp/
