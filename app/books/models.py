@@ -26,7 +26,7 @@ class Book(models.Model):
                 """
 
         CHROME_DIR = os.path.join(ROOT_DIR, 'crawling')
-        chromedriver_dir = os.path.join(CHROME_DIR, 'chromedriver-linux')
+        chromedriver_dir = os.path.join(CHROME_DIR, 'chromedriver')
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
         options.add_argument('window-size=1920x1080')
