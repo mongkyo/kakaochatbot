@@ -22,8 +22,8 @@ class Book(models.Model):
     @staticmethod
     def book_search(keyword):
         """
-                책 검색 정보를 불러와준다
-                """
+        책 검색 정보를 불러와준다
+        """
 
         CHROME_DIR = os.path.join(ROOT_DIR, 'crawling')
         chromedriver_dir = os.path.join(CHROME_DIR, 'chromedriver')
