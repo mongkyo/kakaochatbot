@@ -1,12 +1,12 @@
 import os
 import time
 from bs4 import BeautifulSoup
-from selenium import webdriver
+# from selenium import webdriver
 from django.db import models
-from selenium.webdriver.common.keys import Keys
-
+# from selenium.webdriver.common.keys import Keys
+import requests
 from config.settings.base import ROOT_DIR
-
+import re
 
 class Book(models.Model):
     title = models.TextField('제목')
