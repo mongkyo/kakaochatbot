@@ -48,7 +48,7 @@ class Book(models.Model):
             book_detail['location'] = div_li.select_one('td.location').get_text(" ", strip=True)
             book_detail['status'] = div_li.select_one('span.status').get_text()
             book_one['detail'] = book_detail
-            return book_one
+        return book_one
 #        for a in a_tag[:3 + 1]:
 #            time.sleep(1)
 #            a.click()
